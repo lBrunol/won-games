@@ -1,0 +1,41 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "settings": {
+      "react": {
+        "version": "detect"
+      }
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:react-hooks/recommended",
+        "plugin:prettier/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react",
+        "@typescript-eslint"
+    ],
+    "rules": {
+      //configs para os hooks
+      "react-hooks/rules-of-hooks": "error",
+      "react-hooks/exhaustive-deps": "warn",
+      //desabilita os avisos para o uso do PropTypes (necessário em projetos typescript)
+      "react/prop-types": "off",
+      //impede avisos da falta da importação do React
+      "react/react-in-jsx-scope": "off",
+      //não obriga a tipagem quando o typescript conseguir inferir o tipo do retorno de uma função
+      "@typescript-eslint/explicit-module-boundary-types": "off"
+    }
+}
