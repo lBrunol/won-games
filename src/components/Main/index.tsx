@@ -1,4 +1,4 @@
-import * as S from './styles';
+import * as S from './styles'
 
 const Main = ({ title = 'React', body = 'É isso ai' }) => (
   <main>
